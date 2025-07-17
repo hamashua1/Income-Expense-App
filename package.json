@@ -1,0 +1,20 @@
+{
+  "name": "income-expense-app",
+  "version": "1.0.0",
+  "description": "keeping your expenses clean",
+  "homepage": "https://github.com/hamashua1/Income-Expense-App#readme",
+  "bugs": {
+    "url": "https://github.com/hamashua1/Income-Expense-App/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamashua1/Income-Expense-App.git"
+  },
+  "license": "ISC",
+  "author": "Joshua Nun",
+  "type": "Module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
