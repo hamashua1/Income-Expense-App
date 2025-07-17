@@ -8,7 +8,7 @@ const date = document.getElementById("date").value
 const display = document.getElementById("output")
 
 const money = JSON.parse(localStorage.getItem('money')) || []
-display.innerHtml = ""
+display.innerHTML = ""
 money.push({title, amount, type, date})
 localStorage.setItem('money', JSON.stringify(money))
 document.getElementById("title").value = ""
@@ -22,9 +22,10 @@ document.getElementById("date").value = ""
 //Showing User Inputs
 function expense(){
 const money = JSON.parse(localStorage.getItem('money')) || []
-display.innerHtml = ""
+const display = document.getElementById("output")
+display.innerHTML = ""
 for(let i=0; i<money.length; i++){
-    display.innerHtml += `<li>${money[i].title} - ${money[i].amount} - ${money[i].type} - ${money[i].date}<button onClick="deleteItem(${i})">Delete</button></li>`
+    display.innerHTML += `<li>${money[i].title} - ${money[i].amount} - ${money[i].type} - ${money[i].date}<button onClick="deleteItem(${i})">Delete</button></li>`
 }
 
 }
@@ -56,7 +57,7 @@ function calculateTotal(){
 // Displaying Total Income and Expenses
 function displayTotal(){
     const {totalIncome, totalExpenses} = calculateTotal()
-    document.getElementById("totalIncome").innerHtml = `Total Income: ${totalIncome}`
-    document.getElementById("totalExpenses").innerHtml = `Total Expenses: ${totalExpenses}`
+    document.getElementById("totalIncome").innerHTML = `Total Income: ${totalIncome}`
+    document.getElementById("totalExpenses").innerHTML = `Total Expenses: ${totalExpenses}`
 }
 
