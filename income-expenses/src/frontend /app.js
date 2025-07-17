@@ -39,25 +39,3 @@ expense()
 }
 
 
-// Calculating Total Income and Expenses
-function calculateTotal(){
-    const money = JSON.parse(localStorage.getItem('money')) || []
-    let totalIncome = 0
-    let totalExpenses = 0
-    for(let i=0; i<money.length; i++){
-        if(money[i].type === 'income'){
-            totalIncome += money[i].amount
-        }else{
-            totalExpenses += money[i].amount
-        }
-    }
-    return {totalIncome, totalExpenses}
-}
-
-// Displaying Total Income and Expenses
-function displayTotal(){
-    const {totalIncome, totalExpenses} = calculateTotal()
-    document.getElementById("totalIncome").innerHTML = `Total Income: ${totalIncome}`
-    document.getElementById("totalExpenses").innerHTML = `Total Expenses: ${totalExpenses}`
-}
-
