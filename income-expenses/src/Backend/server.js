@@ -62,7 +62,7 @@ try {
 
 
 //API endpoint to retrieve user data from database 
-app.get('/api/expense', async(req,res)=>{
+app.get('/api/expense/', async(req,res)=>{
 try{
 const db = await getDatabase()
 const data = await db.all('SELECT * FROM push')
