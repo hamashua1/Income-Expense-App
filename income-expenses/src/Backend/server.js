@@ -21,6 +21,19 @@ async function getDatabase() {
     })
 }
 
+// Root route
+app.get('/', (req, res) => {
+    res.json({
+        message: 'Income-Expense App API Server',
+        status: 'running',
+        endpoints: {
+            'POST /api/push': 'Add new income/expense entry',
+            'GET /api/expense': 'Get all entries',
+            'DELETE /api/expense/:id': 'Delete specific entry'
+        }
+    })
+})
+
 
 
 //API endpoint to push user inputs to the database
