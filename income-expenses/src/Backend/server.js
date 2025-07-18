@@ -62,6 +62,23 @@ await db.close()
 
 })
 
+
+//API endpoint to delete user data from database
+app.delete('/api/expense/:id', async(req,res)=>{
+try{
+    const {id} = req.params
+    const db = await getDatabase()
+    await db.run('DELETE FROM push WHERE id = ?', [id])
+    await db.close()
+    res.json({
+        success:true, 
+        message:'data deleted successfully'})
+}catch (error){
+    res.status(404).json({success:false, message:'failed to delete data', error: error.message})
+}
+})
+
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`)
 })
