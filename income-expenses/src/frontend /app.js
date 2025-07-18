@@ -1,6 +1,6 @@
 
 // Adding User inputs 
-function add(){
+function Push(){
 const title = document.getElementById("title").value
 const amount = Number(document.getElementById("amount").value)
 const type = document.getElementById("type").value
