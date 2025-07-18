@@ -28,7 +28,7 @@ app.post('/api/push', async(req,res) => {
 try {
     const {title, amount, type, date} = req.body
     const db = await getDatabase()
-    const result = await db.run('INSERT INTO push(title, amount, date) VALUES (?,?,?,?)', [title, amount,type, date])
+    const result = await db.run('INSERT INTO push(title, amount, type, date) VALUES (?,?,?,?)', [title, amount, type, date])
     await db.close()
     res.status(201).json({
       success:true,

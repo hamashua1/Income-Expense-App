@@ -24,6 +24,7 @@ export async function setupDatabase() {
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 title TEXT NOT NULL,
                 amount REAL NOT NULL,
+                type TEXT NOT NULL,
                 date TEXT NOT NULL,
                 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )
