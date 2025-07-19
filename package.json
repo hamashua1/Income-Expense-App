@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node Backend/server.js"
+    "start": "node src/Backend/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
