@@ -15,7 +15,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-     "start": "node server.js"
+   "start": "node Backend/server.js"
+}
   
   },
   "dependencies": {
