@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "Joshua Nun",
   "type": "module",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
      "start": "node server.js"
     "test": "echo \"Error: no test specified\" && exit 1"
