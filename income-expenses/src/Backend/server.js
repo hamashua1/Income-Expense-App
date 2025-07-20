@@ -11,6 +11,7 @@ const PORT = 8000
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Database connection
 async function getDatabase() {
@@ -23,16 +24,10 @@ async function getDatabase() {
 
 // Root route
 app.get('/', (req, res) => {
-    res.json({
-        message: 'Income-Expense App API Server',
-        status: 'running',
-        endpoints: {
-            'POST /api/push': 'Add new income/expense entry',
-            'GET /api/expense': 'Get all entries',
-            'DELETE /api/expense/:id': 'Delete specific entry'
-        }
-    })
-})
+    res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+});
+
+
 
 
 
