@@ -2,25 +2,17 @@
   "name": "income-expense-app",
   "version": "1.0.0",
   "description": "keeping your expenses clean",
-  "homepage": "https://github.com/hamashua1/Income-Expense-App#readme",
-  "bugs": {
-    "url": "https://github.com/hamashua1/Income-Expense-App/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hamashua1/Income-Expense-App.git"
-  },
-  "license": "ISC",
-  "author": "Joshua Nun",
-  "type": "module",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-      "start" : "node income-expenses/src/Backend/server.js"
+    "start": "node income-expenses/src/Backend/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "license": "ISC",
+  "author": "Joshua Nun"
 }
