@@ -12,7 +12,7 @@ const PORT = 8000
 
 app.use(cors())
 app.use(express.json())
-app.use(express.static(path.join(__dirname, './frontend')));
+app.use(express.static(path.join(__dirname, '../frontend ')));
 await setupDatabase()
 
 // Database connection
@@ -26,7 +26,7 @@ async function getDatabase() {
 
 // Root route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, '../frontend ', 'index.html'));
 });
 
 
@@ -90,7 +90,7 @@ try{
 
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on htttp:// 0.0.0.0 : ${PORT}`)
+    console.log(`Server running on http://0.0.0.0:${PORT}`)
 })
 
 

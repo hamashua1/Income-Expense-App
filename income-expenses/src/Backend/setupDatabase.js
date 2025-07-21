@@ -66,7 +66,4 @@ export async function setupDatabase() {
     } finally {
         await db.close()
     }
-}
-
-// Run the setup
-setupDatabase() 
+} 
