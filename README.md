@@ -14,4 +14,4 @@ this is a full blown income expense App with frontend and backend,where frontend
 #sql-lite
 
 
-git clone to your localhost and use my app
+(https://income-expense-app-production.up.railway.app/)
