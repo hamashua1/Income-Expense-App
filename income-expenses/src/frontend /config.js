@@ -4,7 +4,7 @@ const config = {
         API_BASE_URL: 'http://localhost:8000'
     },
     production: {
-        API_BASE_URL: 'https://income-expense-app-production.up.railway.app/' // Replace with your actual domain/IP
+        API_BASE_URL: 'https://income-expense-app-production.up.railway.app' // Replace with your actual domain/IP
         // For IP address, use: 'http://YOUR_SERVER_IP:8000'
         // For domain, use: 'https://your-domain.com'
     }
