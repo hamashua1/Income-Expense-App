@@ -4,7 +4,7 @@ import sqlite3 from 'sqlite3'
 import { open } from 'sqlite'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { setupDatabase } from './setupDatabase'
+import { setupDatabase } from './setupDatabase.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = express()
