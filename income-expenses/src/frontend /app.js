@@ -7,7 +7,7 @@ async function Push(){
     const date = document.getElementById("date").value
 
     try {
-        const response = await fetch('http://localhost:8000/api/push', {
+        const response = await fetch(`${window.CONFIG.API_BASE_URL}/api/push`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ async function expense(){
     display.innerHTML = ""
     
     try {
-        const response = await fetch('http://localhost:8000/api/expense')
+        const response = await fetch(`${window.CONFIG.API_BASE_URL}/api/expense`)
         const data = await response.json()
         
         if (Array.isArray(data)) {
@@ -61,7 +61,7 @@ async function expense(){
 // Deleting User Inputs
 async function deleteItem(id){
     try {
-        const response = await fetch(`http://localhost:8000/api/expense/${id}`, {
+        const response = await fetch(`${window.CONFIG.API_BASE_URL}/api/expense/${id}`, {
             method: 'DELETE'
         })
         
