@@ -4,6 +4,7 @@ import sqlite3 from 'sqlite3'
 import { open } from 'sqlite'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { setupDatabase } from './setupDatabase'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = express()
@@ -12,6 +13,7 @@ const PORT = 8000
 app.use(cors())
 app.use(express.json())
 app.use(express.static(path.join(__dirname, './frontend')));
+setupDatabase()
 
 // Database connection
 async function getDatabase() {
